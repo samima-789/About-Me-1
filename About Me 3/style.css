@@ -1,0 +1,168 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	height: 100vh;
+}
+
+.left-about{
+	background: #079CFD;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  height: 100vh;
+}
+
+.left-about-content > div{
+	width: 300px;
+	background: #50B8FB;
+	padding: 20px;
+	text-align: center;
+}
+
+.left-about-content{
+	box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+}
+
+.img img{
+	display: block;
+	width: 200px;
+}
+
+.img{
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	border-radius: 50%;
+	transition: all 0.5s ease-in-out;
+}
+
+.shadow{
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+}
+
+
+.shadow:hover .img{
+  transform: scale(0.6);
+}
+
+.left-about-content h1{
+	color: grey;
+  border-bottom: 2px solid white; 
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.left-about-content h3{
+	margin-top: 10px;
+	letter-spacing: 3px;
+	color: white;
+}
+
+.icons{
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	list-style: none;
+}
+
+.icons li{
+	background: #079CFD;
+	color: white;
+	width: 30px;
+	height: 30px;
+	margin: 0 0.5rem;
+	padding: 10px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.icons li:hover{
+	transform: translateX(-10px);
+}
+
+
+.right-about{
+	background: white;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.right-about .about-details{
+	width: 75%;
+}
+
+.right-about .about-details button{
+	border: none;
+	border: 1px solid red;
+	border-radius: 20px;
+	margin-top: 20px;
+	padding: 8px;
+	width: 130px;
+	background: transparent;
+	cursor: pointer;
+}
+
+.right-about h1{
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+.right-about h3{
+	letter-spacing: 2px;
+	color: red;
+}
+
+.btns{
+	display: flex;
+	margin: 20px;
+	padding: 5px;
+}
+
+#btn{
+	border: none;
+	text-transform: uppercase;
+	border: 1px solid red;
+	border-radius: 20px;
+	padding: 10px;
+	width: 130px;
+	background: transparent;
+	cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 992px){
+	.container{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+  .left-about{
+  	position: relative;
+  }
+
+	.left-about-content{
+		position: absolute;
+		right: -50px;
+	}
+}
